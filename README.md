@@ -12,15 +12,25 @@ curl -H "Content-Type: application/json" -X POST -d '{"deviceid":"mydev", "heart
 You need to replace the fields 'deviceid', 'heartrate', 'username' with the fields you defined when creating your application with HDPDemoStudio.
 
 Installation instructions:
+
 1. Download HDF-1.2.0.0-91.tar from the Hortonworks website: http://hortonworks.com/downloads/#dataflow
+
 2. Copy the file to your HDP sandbox: scp ~/Downloads/HDF-1.2.0.0-91.tar root@sandbox:/root
+
 3. Ssh to your sandbox: ssh root@sandbox
+
 4. Extract tar-ball: tar xf HDF-1.2.0.0-91.tar
+
 5. Change Nifi port: vi /root/HDF-1.2.0.0/nifi/conf/nifi.properties (Set nifi.web.http.port to a free port e.g. 8081)
+
 6. Copy flow.xml.gz from this repository to /root/HDF-1.2.0.0/nifi/conf/ (on sandbox)
+
 7. Start nifi: /root/HDF-1.2.0.0/nifi/bin/nifi.sh start
+
 8. Browse to: http://sandbox:8081/nifi (If you specified a different port above modify the URL accordingly)
+
 9. Configure the PutKafka Processor. Set the topic name either to the topic you defined in HDPDemoStudio (Storm reads on this topic) or add an extra "-spark" for using SparkStreaming
+
 
 And then feed data into your application:
 curl ...
