@@ -16,7 +16,7 @@ Installation instructions:
 2. Copy the file to your HDP sandbox: scp ~/Downloads/HDF-1.2.0.0-91.tar root@sandbox:/root
 3. Ssh to your sandbox: ssh root@sandbox
 4. Extract tar-ball: tar xf HDF-1.2.0.0-91.tar
-5. Change Nifi port: vi vi HDF-1.2.0.0/nifi/conf/nifi.properties (Set nifi.web.http.port to a free port e.g. 8081)
+5. Change Nifi port: vi /root/HDF-1.2.0.0/nifi/conf/nifi.properties (Set nifi.web.http.port to a free port e.g. 8081)
 6. Copy flow.xml.gz from this repository to /root/HDF-1.2.0.0/nifi/conf/ (on sandbox)
 7. Start nifi: /root/HDF-1.2.0.0/nifi/bin/nifi.sh start
 8. Browse to: http://sandbox:8081/nifi (If you specified a different port above modify the URL accordingly)
