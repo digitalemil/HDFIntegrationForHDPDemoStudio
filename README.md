@@ -29,7 +29,7 @@ Installation instructions:
 
 8. Browse to: http://sandbox:8081/nifi (If you specified a different port above modify the URL accordingly)
 
-9. Configure the PutKafka Processor. Set the topic name either to the topic you defined in HDPDemoStudio (Storm reads on this topic) or add an extra "-spark" for using SparkStreaming
+9. Configure the PutKafka Processor. Set the topic name either to the topic you defined in HDPDemoStudio (Storm reads from this topic) or add an extra "-spark" for using SparkStreaming
 
 
 And then feed data into your application:
