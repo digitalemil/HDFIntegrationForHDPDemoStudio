@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST -d '{"id":"33", "location":"44.7694,-106.969", "event_timestamp":"2016-5-2T10:55:00.0Z", "deviceid":"mydev", "heartrate":"180", "username":"me"}' http://sandbox:8082/data/publish
